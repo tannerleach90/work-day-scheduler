@@ -1,132 +1,142 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
-      crossorigin="anonymous"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="style.css" />
-    <title>Work Day Scheduler</title>
-  </head>
 
-  <body>
-    <header class="jumbotron">
-      <h1 class="display-3">Work Day Scheduler</h1>
-      <p class="lead">A simple calendar app for scheduling your work day</p>
-      <p id="currentDay" class="lead"></p>
-    </header>
-    <div class="container">
-      <!-- Timeblocks go here -->
-      <div id = "h-9" class="input-group mb-3 hourblock" value="09">
-      
-        <div class="input-group-prepend">
-          <span class="input-group-text" id="basic-addon1">9 A.M.</span>
-      
-        </div>
-        <input id=text-9 type="text" class="form-control" placeholder="To Do" aria-label="To Do" aria-describedby="basic-addon1">
-       
-          <button class="btn btn-outline-secondary submit-btn" type="button" id="button-addon2"><i class="fab fa-algolia"></i></button>
-        
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Work Day Scheduler</title>
+</head>
+
+<body>
+  <header class="jumbotron">
+    <h1 class="display-3">Work Day Scheduler</h1>
+    <p class="lead">A simple calendar app for scheduling your work day</p>
+    <p id="currentDay" class="lead"></p>
+  </header>
+  <div class="container">
+    <!-- Timeblocks go here -->
+    <div id="h-9" class="input-group mb-3 hourblock" value="09">
+
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="basic-addon1">9 A.M.</span>
+
       </div>
-      <div id = "h-10" class="input-group mb-3 hourblock" value = "10"> 
-        <div class="input-group-prepend">
-          <span class="input-group-text" id="basic-addon1">10 A.M.</span>
-      
-        </div>
-        <input id=text-10 type="text" class="form-control" placeholder="To Do" aria-label="To Do" aria-describedby="basic-addon1">
-       
-          <button class="btn btn-outline-secondary submit-btn" type="button" id="button-addon2"><i class="fab fa-algolia"></i></button>
-        
-      </div>
-      <div id = "h-11" class="input-group mb-3 hourblock"value = "11">
-        <div class="input-group-prepend">
-          <span class="input-group-text" id="basic-addon1">11 A.M.</span>
-      
-        </div>
-        <input id=text-11 type="text" class="form-control" placeholder="To Do" aria-label="To Do" aria-describedby="basic-addon1">
-       
-          <button class="btn btn-outline-secondary submit-btn" type="button" id="button-addon2"><i class="fab fa-algolia"></i></button>
-        
-      </div>
-      <div id = "h-12" class="input-group mb-3 hourblock" value = "12">
-        <div class="input-group-prepend">
-          <span class="input-group-text" id="basic-addon1">12 P.M.</span>
-      
-        </div>
-        <input id=text-12 type="text" class="form-control" placeholder="To Do" aria-label="To Do" aria-describedby="basic-addon1">
-       
-          <button class="btn btn-outline-secondary submit-btn" type="button" id="button-addon2"><i class="fab fa-algolia"></i></button>
-        
-      </div>
-      <div id = "h-1" class="input-group mb-3 hourblock"value = "13">
-        <div class="input-group-prepend">
-          <span class="input-group-text" id="basic-addon1">1 P.M.</span>
-      
-        </div>
-        <input id=text-1 type="text" class="form-control" placeholder="To Do" aria-label="To Do" aria-describedby="basic-addon1">
-       
-          <button class="btn btn-outline-secondary submit-btn" type="button" id="button-addon2"><i class="fab fa-algolia"></i></button>
-        
-      </div>
-      <div id = "h-2" class="input-group mb-3 hourblock"value = "14">
-        <div class="input-group-prepend">
-          <span class="input-group-text" id="basic-addon1">2 A.M.</span>
-      
-        </div>
-        <input id=text-2 type="text" class="form-control" placeholder="To Do" aria-label="To Do" aria-describedby="basic-addon1">
-       
-          <button class="btn btn-outline-secondary submit-btn" type="button" id="button-addon2"><i class="fab fa-algolia"></i></button>
-        
-      </div>
-      <div id = "h-3" class="input-group mb-3 hourblock"value = "15">
-        <div class="input-group-prepend">
-          <span class="input-group-text" id="basic-addon1">3 P.M.</span>
-      
-        </div>
-        <input id=text-3 type="text" class="form-control" placeholder="To Do" aria-label="To Do" aria-describedby="basic-addon1">
-       
-          <button class="btn btn-outline-secondary submit-btn" type="button" id="button-addon2"><i class="fab fa-algolia"></i></button>
-        
-      </div>
-      <div id = "h-4" class="input-group mb-3 hourblock"value = "16">
-        <div class="input-group-prepend">
-          <span class="input-group-text" id="basic-addon1">4 P.M.</span>
-      
-        </div>
-        <input id=text-4 type="text" class="form-control" placeholder="To Do" aria-label="To Do" aria-describedby="basic-addon1">
-       
-          <button class="btn btn-outline-secondary submit-btn" type="button" id="button-addon2"><i class="fab fa-algolia"></i></button>
-        
-      </div>
-      <div id = "h-5" class="input-group mb-3 hourblock"value = "17">
-        <div class="input-group-prepend">
-          <span class="input-group-text" id="basic-addon1">5 P.M.</span>
-      
-        </div>
-        <input id=text-5 type="text" class="form-control" placeholder="To Do" aria-label="To Do" aria-describedby="basic-addon1">
-       
-          <button class="btn btn-outline-secondary submit-btn" type="button" id="button-addon2"><i class="fab fa-algolia"></i></button>
-        
-      </div>
-      </div>
+      <input id=text-9 type="text" class="form-control" placeholder="To Do" aria-label="To Do"
+        aria-describedby="basic-addon1">
+
+      <button class="btn btn-outline-secondary submit-btn" type="button" id="button-addon2"><i
+          class="fab fa-algolia"></i></button>
+
     </div>
+    <div id="h-10" class="input-group mb-3 hourblock" value="10">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="basic-addon1">10 A.M.</span>
 
-    
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-    <script src="javascript.js"></script>
-  </body>
+      </div>
+      <input id=text-10 type="text" class="form-control" placeholder="To Do" aria-label="To Do"
+        aria-describedby="basic-addon1">
+
+      <button class="btn btn-outline-secondary submit-btn" type="button" id="button-addon2"><i
+          class="fab fa-algolia"></i></button>
+
+    </div>
+    <div id="h-11" class="input-group mb-3 hourblock" value="11">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="basic-addon1">11 A.M.</span>
+
+      </div>
+      <input id=text-11 type="text" class="form-control" placeholder="To Do" aria-label="To Do"
+        aria-describedby="basic-addon1">
+
+      <button class="btn btn-outline-secondary submit-btn" type="button" id="button-addon2"><i
+          class="fab fa-algolia"></i></button>
+
+    </div>
+    <div id="h-12" class="input-group mb-3 hourblock" value="12">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="basic-addon1">12 P.M.</span>
+
+      </div>
+      <input id=text-12 type="text" class="form-control" placeholder="To Do" aria-label="To Do"
+        aria-describedby="basic-addon1">
+
+      <button class="btn btn-outline-secondary submit-btn" type="button" id="button-addon2"><i
+          class="fab fa-algolia"></i></button>
+
+    </div>
+    <div id="h-1" class="input-group mb-3 hourblock" value="13">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="basic-addon1">1 P.M.</span>
+
+      </div>
+      <input id=text-1 type="text" class="form-control" placeholder="To Do" aria-label="To Do"
+        aria-describedby="basic-addon1">
+
+      <button class="btn btn-outline-secondary submit-btn" type="button" id="button-addon2"><i
+          class="fab fa-algolia"></i></button>
+
+    </div>
+    <div id="h-2" class="input-group mb-3 hourblock" value="14">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="basic-addon1">2 A.M.</span>
+
+      </div>
+      <input id=text-2 type="text" class="form-control" placeholder="To Do" aria-label="To Do"
+        aria-describedby="basic-addon1">
+
+      <button class="btn btn-outline-secondary submit-btn" type="button" id="button-addon2"><i
+          class="fab fa-algolia"></i></button>
+
+    </div>
+    <div id="h-3" class="input-group mb-3 hourblock" value="15">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="basic-addon1">3 P.M.</span>
+
+      </div>
+      <input id=text-3 type="text" class="form-control" placeholder="To Do" aria-label="To Do"
+        aria-describedby="basic-addon1">
+
+      <button class="btn btn-outline-secondary submit-btn" type="button" id="button-addon2"><i
+          class="fab fa-algolia"></i></button>
+
+    </div>
+    <div id="h-4" class="input-group mb-3 hourblock" value="16">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="basic-addon1">4 P.M.</span>
+
+      </div>
+      <input id=text-4 type="text" class="form-control" placeholder="To Do" aria-label="To Do"
+        aria-describedby="basic-addon1">
+
+      <button class="btn btn-outline-secondary submit-btn" type="button" id="button-addon2"><i
+          class="fab fa-algolia"></i></button>
+
+    </div>
+    <div id="h-5" class="input-group mb-3 hourblock" value="17">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="basic-addon1">5 P.M.</span>
+
+      </div>
+      <input id=text-5 type="text" class="form-control" placeholder="To Do" aria-label="To Do"
+        aria-describedby="basic-addon1">
+
+      <button class="btn btn-outline-secondary submit-btn" type="button" id="button-addon2"><i
+          class="fab fa-algolia"></i></button>
+
+    </div>
+  </div>
+  </div>
+
+
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+  <script src="javascript.js"></script>
+</body>
+
 </html>
